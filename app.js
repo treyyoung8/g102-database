@@ -18,8 +18,7 @@ app.get('/:id', (req, res, next) => {
 })
 
 app.post('/', (req, res, next) => {
-    queries.createStudent2(req.body).then(students => res.send(students))
+    queries.createStudent(req.body).then(students => res.send(students))
 })
-
 
 app.listen(port, console.log(`yo ${port}`))

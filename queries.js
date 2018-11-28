@@ -14,16 +14,3 @@ module.exports = {
         return db('students').insert(newStudent).returning('*')
     }
 }
-
-// module.exports = {
-//     getById(id){
-//         return db.select(id).from('students')
-//     }
-// }
-
-// module.exports = {
-//     createStudent(callItWhatYouWill) {
-//         return db('students')
-//             .insert(callItWhatYouWill)
-//     }
-// }
