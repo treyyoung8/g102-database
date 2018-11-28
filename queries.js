@@ -8,9 +8,6 @@ module.exports = {
         return db('students').where('id', id)
     },
     createStudent(newStudent) {
-        return db('students').insert(newStudent)
-    },
-    createStudent2(newStudent) {
         return db('students').insert(newStudent).returning('*')
     }
 }
