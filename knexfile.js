@@ -7,7 +7,7 @@ module.exports = {
     connection: 'postgresql://localhost/g102_student_db'
   },
 
-  production: {
+  productiontouch: {
     client: 'pg',
     connection: process.env.DATABASE_URL
   }
