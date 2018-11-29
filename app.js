@@ -21,4 +21,12 @@ app.post('/', (req, res, next) => {
     queries.createStudent(req.body).then(students => res.send(students))
 })
 
+app.delete('/:id', (req, res, next) => {
+    queries.deleteStudent(req.params.id).then(res.sendStatus(204))
+})
+
+app.put('/:id', (req, res, next) => {
+    queries.updateStudent(req.params.id, req.body).then(updatedStudent => res.json(updatedStudent[0]))
+})
+
 app.listen(port, console.log(`yo ${port}`))
